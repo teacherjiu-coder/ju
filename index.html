@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>지우쌤 컴활 1+2급 ALL-IN-ONE 강의 | 3개월 이용권</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:        #1d1d1f;
+      --gray-1:       #424245;
+      --gray-2:       #6e6e73;
+      --gray-3:       #a1a1a6;
+      --gray-4:       #d2d2d7;
+      --gray-5:       #e8e8ed;
+      --gray-6:       #f5f5f7;
+      --white:        #ffffff;
+      --accent:       #0071e3;
+      --accent-hover: #0077ed;
+      --radius-sm:    10px;
+      --radius-md:    18px;
+      --radius-lg:    28px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+    }
+
+    .ss-frame {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--white);
+      overflow: hidden;
+    }
+
+    /* Typography */
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 12px;
+    }
+    h1.hero-title {
+      font-size: clamp(38px, 7vw, 68px);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      margin: 0 0 20px;
+      color: var(--black);
+    }
+    h2.section-title {
+      font-size: clamp(30px, 5.4vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin: 0 0 16px;
+      color: var(--black);
+    }
+    h2.section-title em {
+      color: var(--gray-2);
+      font-weight: 300;
+      font-style: normal;
+    }
+    .section-lede {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--gray-2);
+      margin: 0 0 32px;
+    }
+    .hero-lede {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--gray-2);
+      margin: 0 0 32px;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: 0;
+      border-radius: 980px;
+      font-size: 17px;
+      font-weight: 500;
+      padding: 16px 32px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary:hover { background: var(--accent-hover); transform: scale(1.02); }
+    .btn-secondary {
+      background: var(--gray-6);
+      color: var(--black);
+      border: 0;
+      border-radius: 980px;
+      font-size: 17px;
+      font-weight: 500;
+      padding: 16px 32px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background .2s;
+    }
+    .btn-secondary:hover { background: var(--gray-5); }
+    .btn-block { width: 100%; }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.85);
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+    nav.scrolled { border-bottom-color: var(--gray-4); }
+    .nav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--black);
+      text-decoration: none;
+    }
+    .nav-cta {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+
+    /* Sections */
+    section {
+      padding: 100px 24px;
+    }
+    section.bg-white { background: var(--white); }
+    section.bg-gray { background: var(--gray-6); }
+    .section-inner { max-width: 100%; }
+
+    /* Hero */
+    .hero {
+      padding-top: 140px;
+      text-align: center;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .hero-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: var(--gray-6);
+      margin: 0 auto 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-3);
+      font-size: 13px;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .chip {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--gray-1);
+      background: var(--gray-6);
+      padding: 8px 14px;
+      border-radius: 980px;
+    }
+    .hero-meta {
+      font-size: 14px;
+      color: var(--gray-3);
+      font-weight: 400;
+    }
+
+    /* Price band */
+    .price-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .price-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .price-card.popular {
+      border: 1.5px solid var(--black);
+    }
+    .price-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--black);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 980px;
+      white-space: nowrap;
+    }
+    .price-name {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 8px 0 4px;
+    }
+    .price-period {
+      font-size: 13px;
+      color: var(--gray-3);
+      margin: 0 0 16px;
+    }
+    .price-amount {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    .price-note {
+      font-size: 13px;
+      color: var(--gray-2);
+      font-weight: 300;
+      line-height: 1.5;
+      margin: 0 0 20px;
+      min-height: 40px;
+    }
+
+    /* Features */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px 24px;
+      margin-top: 48px;
+    }
+    .feature-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--gray-6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .feature-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      color: var(--black);
+    }
+    .feature-desc {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--gray-2);
+      margin: 0;
+    }
+
+    /* Package */
+    .package-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+    .package-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+    }
+    .package-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 12px;
+    }
+    .package-card ul {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--gray-2);
+    }
+    .package-card.app-card {
+      background: linear-gradient(135deg, #FFF8E7, #FFFDF5);
+      position: relative;
+    }
+    .app-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      background: rgba(0, 113, 227, 0.1);
+      padding: 4px 10px;
+      border-radius: 980px;
+      margin-bottom: 12px;
+    }
+    .package-total {
+      margin-top: 24px;
+      background: #4e4e4e;
+      color: var(--white);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 15px;
+    }
+    .package-total .strike {
+      text-decoration: line-through;
+      opacity: 0.6;
+      margin-right: 8px;
+    }
+    .package-total .final-price {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    /* Comparison table */
+    .compare-wrap { overflow-x: auto; margin-top: 40px; }
+    table.compare {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+    table.compare th,
+    table.compare td {
+      padding: 14px 16px;
+      text-align: center;
+      border-bottom: 1px solid var(--gray-5);
+    }
+    table.compare thead th {
+      background: var(--black);
+      color: var(--white);
+      font-weight: 600;
+    }
+    table.compare thead th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    table.compare thead th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
+    table.compare td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: var(--black);
+    }
+    table.compare .col-jiu {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Curriculum */
+    .curriculum-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .curriculum-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+    .curriculum-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 4px;
+      color: var(--black);
+    }
+    .curriculum-card .level-meta {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 500;
+      margin: 0 0 16px;
+    }
+    .curriculum-card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .curriculum-card li {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.55;
+      color: var(--gray-2);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--gray-5);
+    }
+    .curriculum-card li:last-child { border-bottom: 0; }
+    .curriculum-bar {
+      margin-top: 24px;
+      background: var(--black);
+      color: var(--white);
+      border-radius: var(--radius-md);
+      padding: 18px 24px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    /* Reviews */
+    .rating-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+      margin: 40px 0 48px;
+      padding: 32px;
+      background: var(--gray-6);
+      border-radius: var(--radius-md);
+    }
+    .rating-score {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .rating-score span { font-size: 24px; font-weight: 400; color: var(--gray-2); }
+    .stars { color: #ffb800; font-size: 20px; margin: 8px 0; }
+    .rating-count { font-size: 14px; color: var(--gray-2); }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--gray-2);
+      margin-bottom: 6px;
+    }
+    .bar-row .bar {
+      flex: 1;
+      height: 8px;
+      background: var(--gray-5);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .bar-row .bar-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .review-card {
+      background: var(--gray-6);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+    .review-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--gray-3);
+      margin-bottom: 8px;
+    }
+    .review-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      background: rgba(0, 113, 227, 0.08);
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    .review-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    .review-body {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--gray-2);
+      margin: 0;
+    }
+
+    /* Instructor */
+    .instructor-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-top: 40px;
+    }
+    .photo-placeholder {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: var(--gray-6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-3);
+      font-size: 14px;
+      margin: 0 auto;
+    }
+    .instructor-role {
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 500;
+      margin: 0 0 8px;
+    }
+    .instructor-name {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 0 0 8px;
+    }
+    .instructor-title {
+      font-size: 17px;
+      color: var(--gray-2);
+      font-weight: 300;
+      margin: 0 0 28px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .stat-item strong {
+      display: block;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .stat-item span {
+      font-size: 13px;
+      color: var(--gray-2);
+      font-weight: 300;
+    }
+    .career-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .career-list li {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--gray-2);
+      padding: 8px 0;
+      line-height: 1.5;
+    }
+
+    /* FAQ */
+    .faq-list { margin-top: 40px; }
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: 0;
+      padding: 20px 24px;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: inherit;
+      color: var(--black);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-q::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--gray-3);
+      transition: transform .2s;
+    }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease;
+    }
+    .faq-a-inner {
+      padding: 0 24px 20px;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--gray-2);
+    }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      padding: 120px 24px;
+    }
+    .cta-price-box {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 12px;
+      background: var(--white);
+      border-radius: 980px;
+      padding: 16px 28px;
+      margin: 24px 0 40px;
+      font-size: 17px;
+    }
+    .cta-price-box .strike {
+      text-decoration: line-through;
+      color: var(--gray-3);
+    }
+    .cta-price-box .final {
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .cta-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+    .cta-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+    .cta-card .icon { font-size: 24px; margin-bottom: 10px; }
+    .cta-card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0 0 6px;
+    }
+    .cta-card p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--gray-2);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .cta-fine {
+      font-size: 13px;
+      color: var(--gray-3);
+      margin-top: 16px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--black);
+      color: rgba(255, 255, 255, 0.55);
+      padding: 48px 24px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+    footer p { margin: 0 0 8px; }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: none; }
+    }
+    .fade-up {
+      opacity: 0;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .strike { text-decoration: line-through; }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .ss-frame { max-width: 100%; }
+    }
+    @media (max-width: 700px) {
+      section { padding: 72px 22px; }
+      .price-grid { grid-template-columns: 1fr; }
+      .feature-grid { grid-template-columns: repeat(2, 1fr); }
+      .curriculum-grid { grid-template-columns: 1fr; }
+      .rating-block { grid-template-columns: 1fr; }
+      .review-grid { grid-template-columns: 1fr; }
+      .instructor-grid { grid-template-columns: 1fr; }
+      .cta-cards { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .feature-grid { grid-template-columns: 1fr; }
+      h1.hero-title { font-size: 36px; }
+      .instructor-name { font-size: 32px; }
+      .hero-btns { flex-direction: column; align-items: stretch; }
+      .hero-btns .btn-primary,
+      .hero-btns .btn-secondary { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">지우쌤 컴활</a>
+      <button type="button" class="btn-primary nav-cta" data-link="smartstore_3mo">수강신청 →</button>
+    </div>
+  </nav>
+
+  <div class="ss-frame">
+
+    <!-- 1. HERO -->
+    <section class="hero bg-white fade-up">
+      <p class="eyebrow">컴활 1급 · 2급 · 필기 · 실기</p>
+      <h1 class="hero-title">컴활 1+2급,<br>한 번에 끝내세요.</h1>
+      <p class="hero-lede">강의 65강 + 교재 PDF 전권 + 기출 풀이 앱까지.<br>저자가 직접 가르칩니다.</p>
+      <div class="hero-btns">
+        <button type="button" class="btn-primary" data-link="smartstore_3mo">수강신청하기</button>
+        <a href="#package" class="btn-secondary" style="text-decoration:none;display:inline-block;text-align:center;">강의 구성 보기</a>
+      </div>
+      <div class="hero-photo img-placeholder">
+        <!-- TODO: <img src="assets/jiu.jpg" alt="지우쌤"> -->
+        강사 사진
+      </div>
+      <div class="chips">
+        <span class="chip">📺 65강 풀패키지</span>
+        <span class="chip">📘 교재 PDF 전권</span>
+        <span class="chip">📱 모바일 수강</span>
+        <span class="chip">💬 1:1 질문 답변</span>
+        <span class="chip">🎯 최신 기출 반영</span>
+      </div>
+      <p class="hero-meta">3개월 이용권 · 즉시 수강 시작 · PC·모바일 지원</p>
+    </section>
+
+    <!-- 2. PRICE -->
+    <section class="bg-gray fade-up" id="price">
+      <div class="section-inner">
+        <p class="eyebrow">Pricing</p>
+        <h2 class="section-title">합리적인 가격,<br><em>한 번에 끝.</em></h2>
+        <div class="price-grid">
+          <div class="price-card">
+            <p class="price-name">2급 단과</p>
+            <p class="price-period">3개월 이용권</p>
+            <p class="price-amount">39,000원</p>
+            <p class="price-note">필기+실기(2급만)</p>
+            <button type="button" class="btn-secondary btn-block" data-link="smartstore_2grade">선택하기</button>
+          </div>
+          <div class="price-card popular">
+            <span class="price-badge">가장 인기</span>
+            <p class="price-name">1+2급 ALL-IN-ONE</p>
+            <p class="price-period">3개월 이용권</p>
+            <p class="price-amount">59,000원</p>
+            <p class="price-note">교재PDF+엑셀예제+기출앱Pro</p>
+            <button type="button" class="btn-primary btn-block" data-link="smartstore_3mo">수강신청</button>
+          </div>
+          <div class="price-card">
+            <p class="price-name">1급 단과</p>
+            <p class="price-period">3개월 이용권</p>
+            <p class="price-amount">49,000원</p>
+            <p class="price-note">필기+실기(1급만)</p>
+            <button type="button" class="btn-secondary btn-block" data-link="smartstore_6mo">선택하기</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WHY -->
+    <section class="bg-white fade-up">
+      <div class="section-inner">
+        <p class="eyebrow">Why 지우쌤</p>
+        <h2 class="section-title">합격까지, <em>가장 짧은 거리.</em></h2>
+        <p class="section-lede">대학생·직장인·재취업·공무원 준비. 시간이 없다는 게 가장 큰 적입니다. 그래서 합격에 정말 필요한 것만 골랐습니다.</p>
+        <div class="feature-grid">
+          <div class="fade-up">
+            <div class="feature-icon">✍︎</div>
+            <p class="feature-title">저자 직강</p>
+            <p class="feature-desc">교재를 직접 쓴 지우쌤이 직접 가르칩니다. 책과 강의가 완전히 동기화되어 흐름이 끊기지 않아요.</p>
+          </div>
+          <div class="fade-up">
+            <div class="feature-icon">🏆</div>
+            <p class="feature-title">수천 명 합격</p>
+            <p class="feature-desc">누적 수강생 중 컴활 합격자만 수천 명. 검증된 합격 노하우만 담았습니다.</p>
+          </div>
+          <div class="fade-up">
+            <div class="feature-icon">⚡</div>
+            <p class="feature-title">핵심만 빠르게</p>
+            <p class="feature-desc">시험에 자주 출제되는 핵심만 압축. 시간이 없는 사람도 끝낼 수 있습니다.</p>
+          </div>
+          <div class="fade-up">
+            <div class="feature-icon">🔄</div>
+            <p class="feature-title">최신 기출 반영</p>
+            <p class="feature-desc">상시 변형 기출 문제를 매년 업데이트. 가장 최신 출제 경향을 그대로 학습합니다.</p>
+          </div>
+          <div class="fade-up">
+            <div class="feature-icon">💬</div>
+            <p class="feature-title">1:1 질문 답변</p>
+            <p class="feature-desc">모르는 부분은 언제든 물어보세요. 지우쌤이 직접 답변해드립니다.</p>
+          </div>
+          <div class="fade-up">
+            <div class="feature-icon">📱</div>
+            <p class="feature-title">모바일 수강</p>
+            <p class="feature-desc">버스에서, 점심시간에. 폰 하나로 어디서든 끊김 없이 시청 가능합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PACKAGE -->
+    <section class="bg-gray fade-up" id="package">
+      <div class="section-inner">
+        <p class="eyebrow">Package</p>
+        <h2 class="section-title">구성품 <em>한눈에.</em></h2>
+        <p class="section-lede">강의 65강 + 교재 PDF 전권 + 보너스 앱까지. 따로 살 필요 없이 한 번에 끝.</p>
+        <div class="package-cards">
+          <div class="package-card fade-up">
+            <h3>① 강의 65강 풀패키지</h3>
+            <ul>
+              <li>컴활 2급 필기 핵심공략 7강 + 상시기출문제 풀이</li>
+              <li>컴활 2급 실기 핵심공략 18강 + 기출 유형 + 최신기출 1~10회</li>
+              <li>컴활 1급 필기 핵심공략 10강</li>
+              <li>컴활 1급 실기 핵심공략 30강</li>
+            </ul>
+          </div>
+          <div class="package-card fade-up">
+            <h3>② 교재 PDF 전권 + 엑셀 예제</h3>
+            <ul>
+              <li>컴활 2급 필기·실기 핵심공략 PDF</li>
+              <li>컴활 2급 상시기출 1~5회 / 최신기출 1~10회 / 실기 최신기출 10회 PDF</li>
+              <li>컴활 1급 필기·실기 핵심공략 PDF + 최신기출 PDF</li>
+              <li>엑셀 실습 예제 파일 전권</li>
+            </ul>
+          </div>
+          <div class="package-card app-card fade-up">
+            <span class="app-badge">무료 제공</span>
+            <h3>③ 컴활 기출문제 풀이앱 Pro</h3>
+            <ul>
+              <li>2급·1급 필기 기출 1,000+ 문항 무제한 풀이</li>
+              <li>오답노트 자동 생성 · 약점 유형 자동 분석</li>
+              <li>광고 제거 + 모든 해설 강의 잠금 해제 (Pro 전용)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="package-total fade-up">
+          <span>강의 + 교재 + 앱, 총 가치 198,000원 상당</span>
+          <span><span class="strike">198,000원</span> <span class="final-price">59,000원</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. COMPARISON -->
+    <section class="bg-white fade-up">
+      <div class="section-inner">
+        <p class="eyebrow">Comparison</p>
+        <h2 class="section-title">지우쌤이 <em>다른 이유.</em></h2>
+        <div class="compare-wrap">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th>지우쌤</th>
+                <th>타사 강의</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>저자 직강</td><td class="col-jiu">✅ 교재 저자 직접 강의</td><td>❌ 위탁·외주 강사</td></tr>
+              <tr><td>1+2급 패키지</td><td class="col-jiu">✅ 한 번에 전 레벨</td><td>❌ 급수별 별도 구매</td></tr>
+              <tr><td>교재 PDF 포함</td><td class="col-jiu">✅ 전권 무료 제공</td><td>❌ 별도 구매 필요</td></tr>
+              <tr><td>기출 풀이 앱</td><td class="col-jiu">✅ Pro 무료 제공</td><td>❌ 없거나 유료</td></tr>
+              <tr><td>최신 기출 반영</td><td class="col-jiu">✅ 매년 업데이트</td><td>⚠️ 일부만</td></tr>
+              <tr><td>1:1 질문 답변</td><td class="col-jiu">✅ 직접 답변</td><td>❌ 게시판 형식</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CURRICULUM -->
+    <section class="bg-gray fade-up">
+      <div class="section-inner">
+        <p class="eyebrow">Curriculum</p>
+        <h2 class="section-title">65강, <em>합격까지의 모든 길.</em></h2>
+        <p class="section-lede">2급으로 시작해서 1급까지. 한 패키지로 단계별 완성.</p>
+        <div class="curriculum-grid">
+          <div class="curriculum-card fade-up">
+            <h3>Level 1 · 컴활 2급 필기</h3>
+            <p class="level-meta">7강 + 상시기출</p>
+            <ul>
+              <li>01 컴퓨터 일반 핵심 개념 — 운영체제·인터넷·정보보안</li>
+              <li>02 스프레드시트 기본 함수 — 필수 함수 30선 압축 정리</li>
+              <li>03 데이터 입력·서식·차트 — 시험 단골 출제 영역</li>
+              <li>04 수식·기본 통계 함수 — 실무 활용도 100%</li>
+              <li>05 자주 나오는 응용 함수 — 난이도 高 문제 대비</li>
+              <li>06 데이터 관리·정렬·필터 — 체크리스트로 정리</li>
+              <li>07 실전 종합 문제풀이 — 상시기출 변형 패턴</li>
+            </ul>
+          </div>
+          <div class="curriculum-card fade-up">
+            <h3>Level 2 · 컴활 2급 실기</h3>
+            <p class="level-meta">18강 + 기출 10회</p>
+            <ul>
+              <li>01–04 기본 작업 (입력·서식·조건부서식) — 득점 안정화 구간</li>
+              <li>05–09 계산 작업 (함수 마스터) — 실기 합격의 핵심</li>
+              <li>10–13 분석 작업 (정렬·필터·피벗) — 자주 출제되는 유형</li>
+              <li>14–18 기타 작업 (매크로·차트) — 마무리 점수 확보</li>
+              <li>BONUS 시험 자주 출제 유형 모음 — 직전 5개년 분석</li>
+              <li>BONUS 최신 기출문제 1~10회 풀이 — 실전 감각 끝내기</li>
+            </ul>
+          </div>
+          <div class="curriculum-card fade-up">
+            <h3>Level 3 · 컴활 1급 필기</h3>
+            <p class="level-meta">10강</p>
+            <ul>
+              <li>01–02 컴퓨터 일반 심화 — 1급 난이도 대비</li>
+              <li>03–05 스프레드시트 고급 함수 — VLOOKUP·INDEX·MATCH 등</li>
+              <li>06–08 데이터베이스 일반 (Access) — 1급 추가 영역</li>
+              <li>09–10 실전 모의고사 + 해설 — 합격선 안정 확보</li>
+            </ul>
+          </div>
+          <div class="curriculum-card fade-up">
+            <h3>Level 4 · 컴활 1급 실기</h3>
+            <p class="level-meta">30강</p>
+            <ul>
+              <li>01–06 Excel 기본 작업·서식 — 1급 실기 출제 패턴</li>
+              <li>07–15 Excel 함수·VBA·매크로 — 최고 난이도 정복</li>
+              <li>16–22 데이터 분석·시나리오·해찾기 — 1급 핵심 영역</li>
+              <li>23–28 Access 쿼리·폼·보고서 — 시험의 절반</li>
+              <li>29–30 최신 기출 1회 + 총정리 — 시험 직전 대비</li>
+            </ul>
+          </div>
+        </div>
+        <div class="curriculum-bar fade-up">컴활 2급 · 1급 / 필기 · 실기 전 영역 / 무제한 반복 수강 — 총 65강+ 기출 풀이 강의</div>
+      </div>
+    </section>
+
+    <!-- 7. REVIEWS -->
+    <section class="bg-white fade-up">
+      <div class="section-inner">
+        <p class="eyebrow">Reviews</p>
+        <h2 class="section-title">2,481개의 <em>진짜 후기.</em></h2>
+        <div class="rating-block fade-up">
+          <div>
+            <div class="rating-score">4.9<span>/5</span></div>
+            <div class="stars">★★★★★</div>
+            <p class="rating-count">총 2,481개 후기</p>
+          </div>
+          <div>
+            <div class="bar-row"><span>5★</span><div class="bar"><div class="bar-fill" style="width:94%"></div></div><span>94%</span></div>
+            <div class="bar-row"><span>4★</span><div class="bar"><div class="bar-fill" style="width:5%"></div></div><span>5%</span></div>
+            <div class="bar-row"><span>3★</span><div class="bar"><div class="bar-fill" style="width:1%"></div></div><span>1%</span></div>
+            <div class="bar-row"><span>2★</span><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span>0%</span></div>
+            <div class="bar-row"><span>1★</span><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span>0%</span></div>
+          </div>
+        </div>
+        <div class="review-grid">
+          <div class="review-card fade-up">
+            <div class="review-meta"><span>김**</span><span>2025.11</span></div>
+            <span class="review-tag">2급 합격</span>
+            <p class="review-title">두 달 만에 한 번에 붙었어요</p>
+            <p class="review-body">함수가 너무 어려웠는데 지우쌤 강의로 손에 익었어요. 모바일로 출퇴근 시간에 보고 주말에 기출 풀이만 했는데 합격!</p>
+          </div>
+          <div class="review-card fade-up">
+            <div class="review-meta"><span>박**</span><span>2025.10</span></div>
+            <span class="review-tag">1급 합격</span>
+            <p class="review-title">저자 직강이라 책이랑 강의가 따로 안 놀아요</p>
+            <p class="review-body">책 페이지랑 강의가 똑같이 흘러가서 흐름이 안 끊김. 1급 실기 30강이 진짜 핵심이었습니다.</p>
+          </div>
+          <div class="review-card fade-up">
+            <div class="review-meta"><span>이**</span><span>2025.09</span></div>
+            <span class="review-tag">2급 합격</span>
+            <p class="review-title">재취업 준비하면서 들었는데 강추</p>
+            <p class="review-body">핵심만 짧게 가르쳐 주셔서 시간 없는 사람한테 진짜 좋아요. 질문 답변도 진짜 빠릅니다.</p>
+          </div>
+          <div class="review-card fade-up">
+            <div class="review-meta"><span>최**</span><span>2025.08</span></div>
+            <span class="review-tag">1급 합격</span>
+            <p class="review-title">교재 PDF + 앱이 신의 한 수</p>
+            <p class="review-body">인쇄해서 들고 다니면서 보고, 지하철에서는 앱으로 기출 풀고. 시간 정말 효율적으로 썼습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. INSTRUCTOR -->
+    <section class="bg-white fade-up">
+      <div class="section-inner">
+        <p class="eyebrow">Instructor</p>
+        <h2 class="section-title">저자가 직접 가르치는 <em>단 하나의 강의.</em></h2>
+        <p class="section-lede">14년의 컴활 강의 경험. 책을 쓴 사람이, 그 책을 그대로 가르칩니다.</p>
+        <div class="instructor-grid">
+          <div class="photo-placeholder fade-up">
+            <!-- TODO: <img src="assets/jiu.jpg" alt="지우쌤"> -->
+            강사 사진
+          </div>
+          <div class="fade-up">
+            <p class="instructor-role">대표 강사</p>
+            <h3 class="instructor-name">지우쌤</h3>
+            <p class="instructor-title">컴활 교재 저자 · 전문 강의 14년 차</p>
+            <div class="stats-grid">
+              <div class="stat-item"><strong>457만+</strong><span>유튜브 누적 조회수</span></div>
+              <div class="stat-item"><strong>14년</strong><span>컴활 강의 경력</span></div>
+              <div class="stat-item"><strong>수천 명</strong><span>배출한 합격자</span></div>
+            </div>
+            <ul class="career-list">
+              <li>🎖️ KPC 우수지도자상 수상</li>
+              <li>🏫 대학교 · 대기업 컴활 출강 다수</li>
+              <li>📺 前 SBS · 그린컴퓨터 전임 강사</li>
+              <li>📺 457만 뷰 유튜브 '지우쌤' 운영 중</li>
+              <li>✍️ 본 강의 사용 교재 직접 집필</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQ -->
+    <section class="bg-gray fade-up">
+      <div class="section-inner">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="section-title">자주 묻는 <em>질문.</em></h2>
+        <div class="faq-list">
+          <div class="faq-item fade-up">
+            <button type="button" class="faq-q">Q1. 강의 수강 기간이 어떻게 되나요?</button>
+            <div class="faq-a"><div class="faq-a-inner">결제 후 3개월 무제한 수강 가능합니다. 기간 내 몇 번이든 반복 시청할 수 있어요.</div></div>
+          </div>
+          <div class="faq-item fade-up">
+            <button type="button" class="faq-q">Q2. PC와 모바일 모두 수강 가능한가요?</button>
+            <div class="faq-a"><div class="faq-a-inner">네, PC·태블릿·스마트폰 모두 지원합니다. 스마트스토어에서 결제 후 링크를 통해 바로 시청 가능합니다.</div></div>
+          </div>
+          <div class="faq-item fade-up">
+            <button type="button" class="faq-q">Q3. 교재 PDF는 어떻게 받나요?</button>
+            <div class="faq-a"><div class="faq-a-inner">결제 완료 후 제공되는 링크에서 전권 다운로드 가능합니다. 인쇄·모바일 뷰어 모두 지원합니다.</div></div>
+          </div>
+          <div class="faq-item fade-up">
+            <button type="button" class="faq-q">Q4. 환불이 가능한가요?</button>
+            <div class="faq-a"><div class="faq-a-inner">결제일로부터 7일 이내, 강의를 1강도 시청하지 않으신 경우 전액 환불 가능합니다. 스마트스토어 정책에 따릅니다.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CTA -->
+    <section class="cta-section bg-gray fade-up">
+      <p class="eyebrow">마지막으로</p>
+      <h2 class="section-title">이번엔, <em>진짜 끝내세요.</em></h2>
+      <p class="section-lede" style="margin-bottom:0;">지우쌤과 함께라면 컴활, 더 이상 미루지 않아도 됩니다.</p>
+      <div class="cta-price-box">
+        <span class="strike">198,000원</span>
+        <span class="final">59,000원</span>
+      </div>
+      <div class="cta-cards">
+        <div class="cta-card fade-up">
+          <div class="icon">🛒</div>
+          <h4>스마트스토어에서 구매</h4>
+          <p>결제 후 즉시 링크 제공</p>
+        </div>
+        <div class="cta-card fade-up">
+          <div class="icon">▶️</div>
+          <h4>강의 바로 시작</h4>
+          <p>PC·모바일 어디서든 수강</p>
+        </div>
+        <div class="cta-card fade-up">
+          <div class="icon">🏅</div>
+          <h4>합격하면 끝</h4>
+          <p>합격 후기 2,481개가 증명</p>
+        </div>
+      </div>
+      <button type="button" class="btn-primary" data-link="smartstore_3mo">지금 수강신청하기</button>
+      <p class="cta-fine">결제 즉시 수강 시작 · 3개월 무제한 · 환불 가능</p>
+    </section>
+
+  </div>
+
+  <!-- 11. FOOTER -->
+  <footer>
+    <p>지우쌤 컴활 | 컴활 1+2급 ALL-IN-ONE 강의</p>
+    <p>문의: TODO 이메일 또는 스마트스토어 채팅</p>
+    <p>© 2025 지우쌤. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // 1. 링크 상수 — TODO: 실제 스마트스토어 URL로 교체
+    const LINKS = {
+      smartstore_3mo: "TODO: 스마트스토어 3개월권 URL",
+      smartstore_6mo: "TODO: 스마트스토어 6개월권 URL",
+      smartstore_2grade: "TODO: 스마트스토어 2급 단과 URL",
+    };
+
+    // 구매 버튼 — 새 탭 열기
+    document.querySelectorAll('[data-link]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-link');
+        if (LINKS[key]) window.open(LINKS[key], '_blank');
+      });
+    });
+
+    // 2. IntersectionObserver — fadeUp 애니메이션
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // 3. FAQ 아코디언
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.style.maxHeight;
+        document.querySelectorAll('.faq-a').forEach(a => {
+          a.style.maxHeight = '';
+          a.closest('.faq-item')?.classList.remove('open');
+        });
+        if (!isOpen) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // 4. Nav 스크롤 효과
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // 5. 부드러운 앵커 스크롤
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
