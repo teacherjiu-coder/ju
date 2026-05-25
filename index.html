@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>지우쌤 컴활 1+2급 ALL-IN-ONE 강의 | 3개월 이용권</title>
+  <link rel="canonical" href="https://teacherjiu-coder.github.io/ju/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -143,6 +144,16 @@
       font-weight: 600;
       color: var(--black);
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--gray-6);
     }
     .nav-cta {
       font-size: 15px;
@@ -175,11 +186,16 @@
       border-radius: 50%;
       background: var(--gray-6);
       margin: 0 auto 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gray-3);
-      font-size: 13px;
+      overflow: hidden;
+      border: 3px solid var(--gray-5);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    }
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
     }
     .chips {
       display: flex;
@@ -275,6 +291,17 @@
       font-size: 22px;
       margin-bottom: 12px;
     }
+    .feature-icon-img {
+      padding: 0;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--gray-5);
+    }
+    .feature-icon-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .feature-title {
       font-size: 17px;
       font-weight: 600;
@@ -312,6 +339,59 @@
     .package-card.app-card {
       background: linear-gradient(135deg, #FFF8E7, #FFFDF5);
       position: relative;
+      padding-right: 88px;
+    }
+    .app-mascot {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .teaching-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .teaching-strip img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: center;
+      border-radius: var(--radius-sm);
+      background: var(--gray-6);
+    }
+    .book-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .book-gallery img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      background: var(--white);
+      border: 1px solid var(--gray-5);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    .lecture-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 32px 0 8px;
+    }
+    .lecture-gallery img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      background: var(--gray-6);
     }
     .app-badge {
       display: inline-block;
@@ -512,17 +592,35 @@
       align-items: start;
       margin-top: 40px;
     }
-    .photo-placeholder {
+    .instructor-photo-wrap {
+      position: relative;
+      width: 280px;
+      margin: 0 auto;
+    }
+    .instructor-photo {
       width: 280px;
       height: 280px;
       border-radius: 50%;
+      overflow: hidden;
       background: var(--gray-6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gray-3);
-      font-size: 14px;
-      margin: 0 auto;
+      border: 3px solid var(--gray-5);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    }
+    .instructor-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+    }
+    .character-badge {
+      position: absolute;
+      right: -8px;
+      bottom: 8px;
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12));
     }
     .instructor-role {
       font-size: 14px;
@@ -709,11 +807,17 @@
       .rating-block { grid-template-columns: 1fr; }
       .review-grid { grid-template-columns: 1fr; }
       .instructor-grid { grid-template-columns: 1fr; }
+      .lecture-gallery { grid-template-columns: repeat(2, 1fr); }
+      .teaching-strip { grid-template-columns: 1fr; }
       .cta-cards { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
       .feature-grid { grid-template-columns: 1fr; }
+      .lecture-gallery { grid-template-columns: 1fr; }
+      .book-gallery { grid-template-columns: repeat(3, 1fr); }
+      .package-card.app-card { padding-right: 24px; }
+      .app-mascot { width: 56px; height: 56px; right: 12px; top: 12px; }
       h1.hero-title { font-size: 36px; }
       .instructor-name { font-size: 32px; }
       .hero-btns { flex-direction: column; align-items: stretch; }
@@ -726,7 +830,7 @@
 
   <nav>
     <div class="nav-inner">
-      <a href="#" class="nav-logo">지우쌤 컴활</a>
+      <a href="#" class="nav-logo"><img src="img/jw1.png" alt="" class="nav-avatar" width="28" height="28" />지우쌤 컴활</a>
       <button type="button" class="btn-primary nav-cta" data-link="smartstore_3mo">수강신청 →</button>
     </div>
   </nav>
@@ -742,9 +846,8 @@
         <button type="button" class="btn-primary" data-link="smartstore_3mo">수강신청하기</button>
         <a href="#package" class="btn-secondary" style="text-decoration:none;display:inline-block;text-align:center;">강의 구성 보기</a>
       </div>
-      <div class="hero-photo img-placeholder">
-        <!-- TODO: <img src="assets/jiu.jpg" alt="지우쌤"> -->
-        강사 사진
+      <div class="hero-photo">
+        <img src="img/c1.png" alt="지우쌤 강의" width="220" height="220" />
       </div>
       <div class="chips">
         <span class="chip">📺 65강 풀패키지</span>
@@ -796,7 +899,7 @@
         <p class="section-lede">대학생·직장인·재취업·공무원 준비. 시간이 없다는 게 가장 큰 적입니다. 그래서 합격에 정말 필요한 것만 골랐습니다.</p>
         <div class="feature-grid">
           <div class="fade-up">
-            <div class="feature-icon">✍︎</div>
+            <div class="feature-icon feature-icon-img"><img src="img/jw.jpg" alt="지우쌤" width="46" height="46" /></div>
             <p class="feature-title">저자 직강</p>
             <p class="feature-desc">교재를 직접 쓴 지우쌤이 직접 가르칩니다. 책과 강의가 완전히 동기화되어 흐름이 끊기지 않아요.</p>
           </div>
@@ -844,6 +947,11 @@
               <li>컴활 1급 필기 핵심공략 10강</li>
               <li>컴활 1급 실기 핵심공략 30강</li>
             </ul>
+            <div class="teaching-strip">
+              <img src="img/c2.png" alt="지우쌤 강의 장면" loading="lazy" />
+              <img src="img/c3.png" alt="지우쌤 강의 장면" loading="lazy" />
+              <img src="img/c4.png" alt="지우쌤 강의 장면" loading="lazy" />
+            </div>
           </div>
           <div class="package-card fade-up">
             <h3>② 교재 PDF 전권 + 엑셀 예제</h3>
@@ -853,8 +961,24 @@
               <li>컴활 1급 필기·실기 핵심공략 PDF + 최신기출 PDF</li>
               <li>엑셀 실습 예제 파일 전권</li>
             </ul>
+            <div class="book-gallery">
+              <img src="img/b1.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b2.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b3.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b4.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b5.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b6.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b7.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b8.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b9.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b10.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b11.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b12.png" alt="컴활 교재" loading="lazy" />
+              <img src="img/b13.png" alt="컴활 교재" loading="lazy" />
+            </div>
           </div>
           <div class="package-card app-card fade-up">
+            <img src="img/jw3.png" alt="" class="app-mascot" width="72" height="72" />
             <span class="app-badge">무료 제공</span>
             <h3>③ 컴활 기출문제 풀이앱 Pro</h3>
             <ul>
@@ -904,6 +1028,12 @@
         <p class="eyebrow">Curriculum</p>
         <h2 class="section-title">65강, <em>합격까지의 모든 길.</em></h2>
         <p class="section-lede">2급으로 시작해서 1급까지. 한 패키지로 단계별 완성.</p>
+        <div class="lecture-gallery fade-up">
+          <img src="img/c1.png" alt="지우쌤 강의" loading="lazy" />
+          <img src="img/c2.png" alt="지우쌤 강의" loading="lazy" />
+          <img src="img/c3.png" alt="지우쌤 강의" loading="lazy" />
+          <img src="img/c4.png" alt="지우쌤 강의" loading="lazy" />
+        </div>
         <div class="curriculum-grid">
           <div class="curriculum-card fade-up">
             <h3>Level 1 · 컴활 2급 필기</h3>
@@ -1011,9 +1141,11 @@
         <h2 class="section-title">저자가 직접 가르치는 <em>단 하나의 강의.</em></h2>
         <p class="section-lede">14년의 컴활 강의 경험. 책을 쓴 사람이, 그 책을 그대로 가르칩니다.</p>
         <div class="instructor-grid">
-          <div class="photo-placeholder fade-up">
-            <!-- TODO: <img src="assets/jiu.jpg" alt="지우쌤"> -->
-            강사 사진
+          <div class="instructor-photo-wrap fade-up">
+            <div class="instructor-photo">
+              <img src="img/c4.png" alt="지우쌤" width="280" height="280" loading="lazy" />
+            </div>
+            <img src="img/jw2.jpg" alt="" class="character-badge" width="88" height="88" loading="lazy" />
           </div>
           <div class="fade-up">
             <p class="instructor-role">대표 강사</p>
@@ -1102,6 +1234,9 @@
   </footer>
 
   <script>
+    // GitHub Pages: https://teacherjiu-coder.github.io/ju/
+    const SITE_BASE = location.pathname.startsWith('/ju') ? '/ju/' : '';
+
     // 1. 링크 상수 — TODO: 실제 스마트스토어 URL로 교체
     const LINKS = {
       smartstore_3mo: "TODO: 스마트스토어 3개월권 URL",
