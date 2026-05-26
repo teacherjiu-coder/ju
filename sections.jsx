@@ -242,7 +242,7 @@ const ssStyles = `
   /* ====================================================================
      CURRICULUM — clean numbered tracks
      ==================================================================== */
-  .crr-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:14px; }
+  .crr-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap:14px; }
   .crr{
     background: var(--white); border:1px solid var(--gray-5); border-radius: var(--radius-md);
     padding: 32px; transition: transform .25s ease, box-shadow .25s ease;
@@ -391,19 +391,19 @@ function Hero({ t }) {
       </h1>
       <p className="lede anim a-3">
         교재를 직접 쓴 지우쌤이 처음부터 끝까지.<br />
-        강의 65강 + 교재 PDF 전권 + 기출 풀이 앱까지.
+        강의 74강 + 교재 PDF 전권 + 기출 풀이 앱까지.
       </p>
       <div className="char anim a-4">
         <img src="assets/jiu-character.jpg" alt="지우쌤" />
       </div>
       <div className="chips anim a-5">
-        <span>📺 65강 풀패키지</span>
+        <span>📺 74강 풀패키지</span>
         <span>📘 교재 PDF 전권</span>
         <span>📱 모바일 수강</span>
         <span>💬 1:1 질문 답변</span>
         <span>🎯 최신 기출 반영</span>
       </div>
-      <div className="meta anim a-5">3개월 이용권 · 즉시 수강 시작 · PC·모바일 지원</div>
+      <div className="meta anim a-5">3개월· 6개월 이용권 · 즉시 수강 시작 · PC·모바일 지원</div>
     </section>);
 
 }
@@ -414,10 +414,10 @@ function PriceBand({ t }) {
     <section className="price-band" id="buy">
       <div className="price-grid">
         <div className="price-card">
-          <div className="price-plan">2급 단과</div>
-          <div className="price-duration">3개월 이용권</div>
-          <div className="price-amount">39,000<span className="won">원</span></div>
-          <div className="price-note">필기 + 실기 (2급만)</div>
+          <div className="price-plan">1+2급</div>
+          <div className="price-duration">1개월 이용권</div>
+          <div className="price-amount">24,000<span className="won">원</span></div>
+          <div className="price-note">유튜브 멤버십으로 구매 가능</div>
         </div>
         <div className="price-card featured">
           <div className="featured-badge">가장 인기</div>
@@ -427,10 +427,10 @@ function PriceBand({ t }) {
           <div className="price-note">교재 PDF + 엑셀 예제 + 기출 앱 Pro</div>
         </div>
         <div className="price-card">
-          <div className="price-plan">1급 단과</div>
-          <div className="price-duration">3개월 이용권</div>
-          <div className="price-amount">49,000<span className="won">원</span></div>
-          <div className="price-note">필기 + 실기 (1급만)</div>
+          <div className="price-plan">1+2급</div>
+          <div className="price-duration">6개월 이용권</div>
+          <div className="price-amount">79,000<span className="won">원</span></div>
+          <div className="price-note">교재 PDF + 엑셀 예제 + 기출 앱 Pro</div>
         </div>
       </div>
     </section>);
@@ -452,10 +452,10 @@ function Features() {
       <div className="inner">
         <div className="eyebrow">Why 지우쌤</div>
         <h2 className="stitle">합격까지, <em>가장 짧은 거리.</em></h2>
-        <p className="ssub">대학생·직장인·재취업·공무원 준비. 시간이 없다는 게 가장 큰 적입니다. 그래서 합격에 정말 필요한 것만 골랐습니다.</p>
+        <p className="ssub">대학생·직장인·재취업·공무원 준비. 시간이 없다는 게 가장 큰 적입니다.
+그래서 합격에 정말 필요한 핵심만 담았습니다.</p>
         <div className="feature-grid">
-          {items.map((x, i) =>
-          <div className="feature-item" key={i}>
+          {items.map((x, i) => <div className="feature-item" key={i}>
               <div className="feature-icon">{x.ic}</div>
               <div className="feature-title">{x.t}</div>
               <div className="feature-desc">{x.d}</div>
@@ -474,7 +474,7 @@ function Composition({ t }) {
       <div className="inner">
         <div className="eyebrow">Package</div>
         <h2 className="stitle">구성품 <em>한눈에.</em></h2>
-        <p className="ssub">강의 65강 + 교재 PDF 전권 + 보너스 앱까지. 따로 살 필요 없이 한 번에 끝.</p>
+        <p className="ssub">강의 74강 + 교재 PDF 전권 + 보너스 앱까지. 따로 살 필요 없이 한 번에 끝.</p>
 
         <div className="comp-list">
           <div className="comp">
@@ -482,13 +482,12 @@ function Composition({ t }) {
               <div className="num">1</div>
               <div className="tag">Part 1 · 강의</div>
             </div>
-            <h3>강의 65강 풀패키지</h3>
+            <h3>강의 74강 풀패키지</h3>
             <p className="meta">컴활 1급 + 2급 / 필기 + 실기 / 3개월 무제한 수강</p>
             <ul>
-              <li>컴활 2급 필기 핵심공략 <b>7강</b> + 상시기출문제 풀이</li>
-              <li>컴활 2급 실기 핵심공략 <b>18강</b> + 기출 유형 + 최신기출 1~10회</li>
-              <li>컴활 1급 필기 핵심공략 <b>10강</b></li>
-              <li>컴활 1급 실기 핵심공략 <b>30강</b></li>
+              <li>📙 컴활 1·2급 필기 핵심공략 + 기출문제 <b>11강</b></li>
+              <li>📗 컴활 1급 실기 핵심공략 + 기출문제 <b>32강</b></li>
+              <li>📘 컴활 2급 실기 핵심공략 + 기출문제 <b>31강</b></li>
             </ul>
           </div>
 
@@ -498,7 +497,7 @@ function Composition({ t }) {
               <div className="tag">Part 2 · 교재</div>
             </div>
             <h3>교재 PDF 전권 + 엑셀 예제</h3>
-            <p className="meta">인쇄 / 모바일 뷰어 모두 지원 · 손에 들고 학습 가능</p>
+            <p className="meta">모바일 뷰어 (갤럭시탭, 아이패드, 스마트폰, PC, 노트북) 모두 지원</p>
             <ul>
               <li>컴활 2급 필기 핵심공략 PDF</li>
               <li>컴활 2급 상시기출문제 1~5회 PDF</li>
@@ -515,7 +514,7 @@ function Composition({ t }) {
 
           <div className="comp bonus">
             <div className="head">
-              <div className="num">3</div>
+              <div className="num" style={{ backgroundColor: "rgb(255, 247, 127)" }}>3</div>
               <div className="tag">Bonus · 앱</div>
             </div>
             <h3>컴활 기출문제 풀이앱 Pro <span className="badge-free">무료 제공</span></h3>
@@ -528,7 +527,7 @@ function Composition({ t }) {
           </div>
         </div>
 
-        <div className="comp-total" style={{ backgroundColor: "rgb(78, 78, 78)" }}>
+        <div className="comp-total" style={{ backgroundColor: "rgb(51, 51, 51)" }}>
           <div className="l">강의 + 교재 + 앱, 총 가치 198,000원 상당</div>
           <div className="r">
             <span className="ago">198,000원</span>
@@ -548,7 +547,7 @@ function Instructor() {
       <div className="inner">
         <div className="eyebrow">Instructor</div>
         <h2 className="stitle">저자가 직접 가르치는<br /><em>단 하나의 강의.</em></h2>
-        <p className="ssub">14년의 컴활 강의 경험. 책을 쓴 사람이, 그 책을 그대로 가르칩니다.</p>
+        <p className="ssub">9년의 컴활 강의 경험. 책을 쓴 사람이, 그 책을 그대로 가르칩니다.</p>
 
         <div className="ins-grid">
           <div className="ph">
@@ -557,11 +556,11 @@ function Instructor() {
           <div>
             <div className="role">대표 강사</div>
             <h3>지우쌤</h3>
-            <div className="sub">컴활 교재 저자 · 전문 강의 14년 차</div>
+            <div className="sub">컴활 교재 저자 · 전문 강의 9년 차</div>
 
             <div className="stats">
               <div className="s"><b>457만+</b><span>유튜브 누적 조회수</span></div>
-              <div className="s"><b>14년</b><span>컴활 강의 경력</span></div>
+              <div className="s"><b>9년</b><span>컴활 강의 경력</span></div>
               <div className="s"><b>수천 명</b><span>배출한 합격자</span></div>
             </div>
 
@@ -583,45 +582,33 @@ function Instructor() {
 function Curriculum() {
   const tracks = [
   {
-    lev: 'Level 1 · 컴활 2급', title: '필기 핵심공략', badge: '7강 + 상시기출',
+    lev: 'Track 1 · 컴활 1·2급 공통', title: '필기 핵심공략', badge: '11강 + 기출문제',
     list: [
-    ['01', '컴퓨터 일반 핵심 개념', '운영체제·인터넷·정보보안'],
-    ['02', '스프레드시트 기본 함수', '필수 함수 30선 압축 정리'],
-    ['03', '데이터 입력·서식·차트', '시험 단골 출제 영역'],
-    ['04', '수식·기본 통계 함수', '실무 활용도 100%'],
-    ['05', '자주 나오는 응용 함수', '난이도 高 문제 대비'],
-    ['06', '데이터 관리·정렬·필터', '체크리스트로 정리'],
-    ['07', '실전 종합 문제풀이', '상시기출 변형 패턴']]
+    ['01–03', '컴퓨터 일반 핵심 개념', '운영체제·인터넷·정보보안'],
+    ['04–06', '스프레드시트 일반', '필수 함수 30선 압축 정리'],
+    ['07–08', '데이터베이스 일반 (Access)', '1급 추가 영역'],
+    ['09–11', '실전 모의고사 + 해설', '합격선 안정 확보'],
+    ['BONUS', '상시 기출 + 최신 기출 풀이', '출제 빈도순 정리']]
 
   },
   {
-    lev: 'Level 2 · 컴활 2급', title: '실기 핵심공략', badge: '18강 + 기출 10회',
-    list: [
-    ['01–04', '기본 작업 (입력·서식·조건부서식)', '득점 안정화 구간'],
-    ['05–09', '계산 작업 (함수 마스터)', '실기 합격의 핵심'],
-    ['10–13', '분석 작업 (정렬·필터·피벗)', '자주 출제되는 유형'],
-    ['14–18', '기타 작업 (매크로·차트)', '마무리 점수 확보'],
-    ['BONUS', '시험 자주 출제 유형 모음', '직전 5개년 분석'],
-    ['BONUS', '최신 기출문제 1~10회 풀이', '실전 감각 끝내기']]
-
-  },
-  {
-    lev: 'Level 3 · 컴활 1급', title: '필기 핵심공략', badge: '10강',
-    list: [
-    ['01–02', '컴퓨터 일반 심화', '1급 난이도 대비'],
-    ['03–05', '스프레드시트 고급 함수', 'VLOOKUP·INDEX·MATCH 등'],
-    ['06–08', '데이터베이스 일반 (Access)', '1급 추가 영역'],
-    ['09–10', '실전 모의고사 + 해설', '합격선 안정 확보']]
-
-  },
-  {
-    lev: 'Level 4 · 컴활 1급', title: '실기 핵심공략', badge: '30강',
+    lev: 'Track 2 · 컴활 1급', title: '실기 핵심공략', badge: '32강 + 기출문제',
     list: [
     ['01–06', 'Excel 기본 작업·서식', '1급 실기 출제 패턴'],
     ['07–15', 'Excel 함수·VBA·매크로', '최고 난이도 정복'],
     ['16–22', '데이터 분석·시나리오·해찾기', '1급 핵심 영역'],
     ['23–28', 'Access 쿼리·폼·보고서', '시험의 절반'],
-    ['29–30', '최신 기출 1회 + 총정리', '시험 직전 대비']]
+    ['29–32', '최신 기출 1회 + 총정리', '시험 직전 대비']]
+
+  },
+  {
+    lev: 'Track 3 · 컴활 2급', title: '실기 핵심공략', badge: '31강 + 기출문제',
+    list: [
+    ['01–06', '기본 작업 (입력·서식·조건부서식)', '득점 안정화 구간'],
+    ['07–15', '계산 작업 (함수 마스터)', '실기 합격의 핵심'],
+    ['16–20', '분석 작업 (정렬·필터·피벗)', '자주 출제되는 유형'],
+    ['21–25', '기타 작업 (매크로·차트)', '마무리 점수 확보'],
+    ['26–31', '최신 기출문제 1~10회 풀이', '실전 감각 끝내기']]
 
   }];
 
@@ -629,7 +616,7 @@ function Curriculum() {
     <section className="section alt">
       <div className="inner">
         <div className="eyebrow">Curriculum</div>
-        <h2 className="stitle">65강, <em>합격까지의 모든 길.</em></h2>
+        <h2 className="stitle">74강, <em>합격까지의 모든 길.</em></h2>
         <p className="ssub">2급으로 시작해서 1급까지. 한 패키지로 단계별 완성.</p>
 
         <div className="crr-grid">
@@ -655,8 +642,8 @@ function Curriculum() {
         </div>
 
         <div className="crr-total">
-          <div className="l">컴활 2급 · 1급 / 필기 · 실기 전 영역 / 무제한 반복 수강</div>
-          <div className="r">총 <b>65강 +</b> 기출 풀이 강의</div>
+          <div className="l">컴활 1 · 2급 / 필기 · 실기 전 영역 / 무제한 반복 수강</div>
+          <div className="r">총 <b>74강 +</b> 기출 풀이 강의</div>
         </div>
       </div>
     </section>);
@@ -666,10 +653,12 @@ function Curriculum() {
 // ── REVIEWS ─────────────────────────────────────────────────────────────────
 function Reviews() {
   const reviews = [
-  { who: '김**', date: '2025.11', tag: '2급 합격', stars: '★★★★★', title: '두 달 만에 한 번에 붙었어요', body: '함수가 너무 어려웠는데 지우쌤 강의로 손에 익었어요. 모바일로 출퇴근 시간에 보고 주말에 기출 풀이만 했는데 합격!' },
-  { who: '박**', date: '2025.10', tag: '1급 합격', stars: '★★★★★', title: '저자 직강이라 책이랑 강의가 따로 안 놀아요', body: '책 페이지랑 강의가 똑같이 흘러가서 흐름이 안 끊김. 1급 실기 30강이 진짜 핵심이었습니다.' },
-  { who: '이**', date: '2025.09', tag: '2급 합격', stars: '★★★★★', title: '재취업 준비하면서 들었는데 강추', body: '핵심만 짧게 가르쳐 주셔서 시간 없는 사람한테 진짜 좋아요. 질문 답변도 진짜 빠릅니다.' },
-  { who: '최**', date: '2025.08', tag: '1급 합격', stars: '★★★★★', title: '교재 PDF + 앱이 신의 한 수', body: '인쇄해서 들고 다니면서 보고, 지하철에서는 앱으로 기출 풀고. 시간 정말 효율적으로 썼습니다.' }];
+  { who: '녜원', date: '2026.05', tag: '2급 필기 합격', stars: '★★★★★', title: '2일의 기적, 2급 필기 합격', body: '선생님이 주신 자료 대략 700문제 되는 거 같은데 다 풀고 가니 시험볼 때 어려움 없었어요 ㅎㅎ 단기간 집중으로 금방 끝낼 수 있었어요!! 강추합니다.' },
+  { who: '탕마짱', date: '2026.04', tag: '2급 필기 합격', stars: '★★★★★', title: '컴활 2급 필기 합격 (feat. 5일의 기적)', body: '5일만에 합격이라니 진짜 믿기지가 않아요. 지우쌤 강의는 진짜 필요한 부분만 콕콕 짚어주셔서 시간 낭비가 없어요.' },
+  { who: '김두룹', date: '2026.03', tag: '2급 실기 95점', stars: '★★★★★', title: '컴활 2급 1달 합격 (실기 95점)', body: '실기는 자신 없었는데 1달 만에 95점으로 합격. 강의 따라가다 보면 손이 알아서 움직여요. 교재 PDF랑 같이 보면 시너지 최고!' },
+  { who: '진해인', date: '2026.02', tag: '1급 합격', stars: '★★★★★', title: '드디어 1급 4트만에 합격했습니다!', body: '1급 4번 떨어지고 지우쌤 강의 듣고 합격. 1급 실기 30강이 진짜 핵심이에요. 다른 강의랑 비교가 안 됩니다.' },
+  { who: 'illiiiilli', date: '2026.01', tag: '2급 합격', stars: '★★★★★', title: '컴활 7일 합격 (자료공유, 실제 기출, 자세한 후기)', body: '7일만에 끝냈어요. 자료가 충분해서 다른 거 살 필요 전혀 없었고, 지우쌤이 떠먹여주듯 가르쳐 주셔서 진짜 편했어요.' },
+  { who: '한송이67', date: '2025.12', tag: '2급 합격', stars: '★★★★★', title: '한 달만에 컴활 2급 합격했어요^^', body: '직장 다니면서 한 달 컷. 출퇴근길에 폰으로 강의 듣고 주말에 기출 풀이만 했는데 이게 됩니다. 진짜 강추예요.' }];
 
   const bars = [
   { star: 5, pct: 94 },
@@ -682,12 +671,12 @@ function Reviews() {
     <section className="section">
       <div className="inner">
         <div className="eyebrow">Reviews</div>
-        <h2 className="stitle">2,481개의 <em>진짜 후기.</em></h2>
+        <h2 className="stitle">수강생들의 <em>진짜 합격 후기.</em></h2>
         <p className="ssub">먼저 합격한 수강생들의 후기를 확인하세요.</p>
 
         <div className="rv-top">
           <div className="score-block">
-            <div className="score num-tab">4.9<span className="o" style={{ fontSize: 24 }}>/5</span></div>
+            <div className="score num-tab">9.9<span className="o" style={{ fontSize: 24 }}>/10</span></div>
             <div className="stars">★★★★★</div>
             <div className="meta">총 2,481개 후기</div>
           </div>
@@ -732,7 +721,7 @@ function FinalCTA({ t }) {
         <span className="now num-tab">{won(t.salePrice)}</span>
         <span className="won-x">원</span>
       </div>
-      <div className="small">결제 즉시 수강 시작 · 3개월 무제한 · 환불 가능</div>
+      <div className="small">결제 즉시 수강 시작 · 3개월 무제한 · 교재 + 예제 무료 제공</div>
     </section>);
 
 }
